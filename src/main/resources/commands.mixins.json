@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "app.qwertz.qwertzcore.mixin.command",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "ArgumentTypesAccessor",
+    "CommandManagerMixin",
+    "EntitySelectorOptionsAccessor",
+    "EntitySelectorReaderMixin",
+    "HelpCommandAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

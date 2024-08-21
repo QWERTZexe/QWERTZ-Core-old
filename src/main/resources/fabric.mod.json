@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "qwertzcore",
+  "version": "${version}",
+  "name": "QWERTZ Core",
+  "description": "The only server-side mod you will ever need!",
+  "authors": [
+    "QWERTZ_EXE"
+  ],
+  "contact": {
+    "homepage": "https://qwertz.app/",
+    "sources": "https://github.com/QWERTZexe/QWERTZ-Core"
+  },
+  "license": "AGPL v3.0",
+  "icon": "assets/qwertzcore/QWERTZCore.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "app.qwertz.qwertzcore.QWERTZCore"
+    ]
+  },
+  "mixins": [
+    "commands.mixins.json",
+    "events-interaction.mixins.json",
+    "qwertzcore.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.2",
+    "minecraft": "~1.21.2-alpha.24.33.a",
+    "java": ">=17"
+  }
+}

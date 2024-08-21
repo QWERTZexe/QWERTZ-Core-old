@@ -1,0 +1,32 @@
+plugins {
+    id 'fabric-loom' version '1.6-SNAPSHOT'
+    id 'maven-publish'
+}
+dependencies {
+    minecraft "com.mojang:minecraft:24w34a"
+    mappings "net.fabricmc:yarn:24w34a+build.1:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.16.2"
+   }
+
+repositories {
+    mavenLocal()
+}
+
+group 'app.qwertz'
+version '1.0'
+
+processResources {
+    inputs.property "version", project.version
+    filteringCharset "UTF-8"
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+loom {
+    runs {
+        server {
+            runDir = "run"
+        }
+    }
+}
